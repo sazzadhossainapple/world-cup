@@ -100,8 +100,8 @@ main {
   list-style: none;
   background: #ffffff;
   border-radius: 10px;
-  width: 174px;
-  height: 30px;
+  width: 80%;
+  height: 10%;
   text-align: center;
   padding: 17px 39px;
   border: 1px solid #161616;
@@ -124,8 +124,7 @@ main {
 
 .blogs {
   display: grid;
-  grid-template-columns: repeat(3, 31%);
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 24px;
 }
@@ -171,6 +170,61 @@ main {
   margin-right: 13px;
 }
 
+/*------ upcoming match section style ------*/
+
+.upcoming-match {
+  padding: 40px 15px;
+}
+.upcoming-match .thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.upcoming-match .thumbnail img {
+  width: 93px;
+  height: 54px;
+}
+.upcoming-match-vs {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #161616;
+}
+.upcoming-match .upcoming-match-info {
+  padding: 0;
+  text-align: center;
+}
+.upcoming-match-info p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #4d4d4d;
+}
+
+/*------ all group section style ------*/
+.all-group {
+  border-radius: 102px;
+  box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.all-group:hover {
+  box-shadow: rgb(0 0 0 / 30%) 0 4px 6px -1px, rgb(0 0 0 / 50%) 0 2px 4px -1px;
+}
+.all-group .thumbnail {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 20px;
+}
+.all-group .thumbnail img {
+  border: 1px solid black;
+  border-radius: 50%;
+}
 /*---------- button no show desktop device--------- */
 
 .tablet-button {
@@ -261,7 +315,7 @@ footer h2 {
 
   .blogs-section {
     flex-direction: column;
-    margin: 24px 0;
+    margin: 40px 0 70px 0;
   }
   .side-navbar {
     width: 100%;
@@ -297,7 +351,7 @@ footer h2 {
 /*------- tablet device------- */
 @media only screen and (min-width: 689px) and (max-width: 992px) {
   .container {
-    padding: 0 50px;
+    padding: 0 25px;
   }
   /*------ greatest banner section style tablet Device ------*/
   .greatest-palyer-detills {
@@ -310,6 +364,8 @@ footer h2 {
   .greatest-palyer-img img {
     width: 323px;
     height: 340px;
+    position: relative;
+    margin-top: 101%;
   }
   /*--------- blog tablet device------- */
   .blogs-section {
@@ -320,12 +376,15 @@ footer h2 {
     height: 100%;
     background-color: transparent;
   }
+  .navbar {
+    padding: 30px 0 30px 0;
+  }
   .navbar ul {
     flex-direction: row;
     gap: 10px;
   }
   .blogs {
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 1fr);
   }
   .thumbnail img {
     width: 100%;
